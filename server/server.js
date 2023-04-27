@@ -37,7 +37,7 @@ app.post('/', async(req, res) => {
             presence_penalty: 0,
         });;
 
-        res.status(200).send({
+        res.status(200).send({  //200 means the request has succeeded
             bot: response.data.choices[0].text   //choices[0] becaus it gives a large set of answer array from where we have to only get the first one as it is the most relevant one.
         })
     } catch (error){

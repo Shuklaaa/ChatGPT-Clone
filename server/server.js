@@ -38,7 +38,7 @@ app.post('/', async(req, res) => {
         });;
 
         res.status(200).send({
-            bot: response.data.choices[0].text
+            bot: response.data.choices[0].text   //choices[0] becaus it gives a large set of answer array from where we have to only get the first one as it is the most relevant one.
         })
     } catch (error){
         console.log(error);
